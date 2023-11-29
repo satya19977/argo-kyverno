@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-app
+  name: deployment-nginx
 spec:
   selector:
     matchLabels:
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ng
-        image: busybox
+        image: nginx
         ports:
         - containerPort: 8080
         resources:
